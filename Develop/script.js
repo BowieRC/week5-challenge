@@ -54,3 +54,9 @@ function checkTime() {
     hourBlockEl.attr("class", "row time-block present");
   }
 }
+
+//print current day to header
+var currentDayEl = $("#currentDay");
+var currentDateEl = $("#currentDate");
+currentDayEl.text(dayjs().format("dddd"));
+currentDateEl.text(dayjs().format("DD/MM/YYYY"));
