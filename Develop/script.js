@@ -88,3 +88,11 @@ function checkClicks() {
     localStorage.setItem("hour-7 event", $("#input-7").val());
   });
 }
+
+
+$("window").load(run());
+
+function run() {
+  console.log("Site Loaded");
+  checkClicks();
+}
