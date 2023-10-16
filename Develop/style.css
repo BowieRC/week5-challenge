@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
@@ -56,4 +56,15 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.day-date-container {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+#currentDay,
+#currentDate {
+  font-weight: bold;
 }
