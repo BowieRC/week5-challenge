@@ -12,6 +12,11 @@ textarea {
   padding: 10px;
 }
 
+footer{
+  min-height: 5rem;
+  background-color: white;
+}
+
 .description {
   white-space: pre-wrap;
 }
@@ -67,4 +72,28 @@ textarea {
 #currentDay,
 #currentDate {
   font-weight: bold;
+}
+
+.saveFlash{
+  position: fixed;
+  top: 1rem;
+  left: calc(50% - 15rem);
+
+  width: 30rem;
+  height: 50px;
+
+  background-color: orange;
+  color: black;
+
+  text-align: center;
+  line-height: 50px;
+  
+  animation-name: flash;
+  animation-duration: 4s;
+}
+
+@keyframes flash{
+  0%{opacity: 0%;}
+  2%{opacity: 100%;}
+  100%{opacity: 0%;}
 }

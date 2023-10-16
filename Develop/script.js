@@ -1,5 +1,5 @@
 var mainEl = $(".main");
-var workingHours = [9, 10, 11, 12, 13, 14, 15, 16];
+var workingHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 // load hour blocks
 for (i = 0; i < workingHours.length; i++) {
@@ -25,7 +25,6 @@ for (i = 0; i < workingHours.length; i++) {
   textInputEl.number = i;
 
   var saveBtn = $("<button>");
-  saveBtn.text("Save");
   saveBtn.attr("class", "btn saveBtn col-2 col-md-1");
   saveBtn.attr("aria-label", "save");
   saveBtn.attr("id", "sButton-" + i);
@@ -37,6 +36,7 @@ for (i = 0; i < workingHours.length; i++) {
   mainEl.append(hourBlockEl);
   hourBlockEl.append(hourNumberEl);
   hourBlockEl.append(textInputEl);
+  saveBtn.append(saveIcon);
   hourBlockEl.append(saveBtn);
 }
 
@@ -63,28 +63,52 @@ currentDateEl.text(dayjs().format("DD/MM/YYYY"));
 function checkClicks() {
   $("body").on("click", "#sButton-0", () => {
     localStorage.setItem("hour-0 event", $("#input-0").val());
+    alertFlash();
   });
   $("body").on("click", "#sButton-1", () => {
     localStorage.setItem("hour-1 event", $("#input-1").val());
+    alertFlash();
   });
   $("body").on("click", "#sButton-2", () => {
     localStorage.setItem("hour-2 event", $("#input-2").val());
+    alertFlash();
   });
   $("body").on("click", "#sButton-3", () => {
     localStorage.setItem("hour-3 event", $("#input-3").val());
+    alertFlash();
   });
   $("body").on("click", "#sButton-4", () => {
     localStorage.setItem("hour-4 event", $("#input-4").val());
+    alertFlash();
   });
   $("body").on("click", "#sButton-5", () => {
     localStorage.setItem("hour-5 event", $("#input-5").val());
+    alertFlash();
   });
   $("body").on("click", "#sButton-6", () => {
     localStorage.setItem("hour-6 event", $("#input-6").val());
+    alertFlash();
   });
   $("body").on("click", "#sButton-7", () => {
     localStorage.setItem("hour-7 event", $("#input-7").val());
+    alertFlash();
   });
+  $("body").on("click", "#sButton-8", () => {
+    localStorage.setItem("hour-8 event", $("#input-8").val());
+    alertFlash();
+  });
+  
+}
+
+function alertFlash(){
+  var alertEl = $("<div>");
+    alertEl.attr("class", "saveFlash");
+    alertEl.text("Event set into Local Storage")
+    setTimeout(function(){
+      alertEl.remove();
+    },3000);
+  
+  mainEl.append(alertEl);
 }
 
 
