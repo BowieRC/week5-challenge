@@ -60,3 +60,31 @@ var currentDayEl = $("#currentDay");
 var currentDateEl = $("#currentDate");
 currentDayEl.text(dayjs().format("dddd"));
 currentDateEl.text(dayjs().format("DD/MM/YYYY"));
+
+//check clicks
+function checkClicks() {
+  $("body").on("click", "#sButton-0", () => {
+    localStorage.setItem("hour-0 event", $("#input-0").val());
+  });
+  $("body").on("click", "#sButton-1", () => {
+    localStorage.setItem("hour-1 event", $("#input-1").val());
+  });
+  $("body").on("click", "#sButton-2", () => {
+    localStorage.setItem("hour-2 event", $("#input-2").val());
+  });
+  $("body").on("click", "#sButton-3", () => {
+    localStorage.setItem("hour-3 event", $("#input-3").val());
+  });
+  $("body").on("click", "#sButton-4", () => {
+    localStorage.setItem("hour-4 event", $("#input-4").val());
+  });
+  $("body").on("click", "#sButton-5", () => {
+    localStorage.setItem("hour-5 event", $("#input-5").val());
+  });
+  $("body").on("click", "#sButton-6", () => {
+    localStorage.setItem("hour-6 event", $("#input-6").val());
+  });
+  $("body").on("click", "#sButton-7", () => {
+    localStorage.setItem("hour-7 event", $("#input-7").val());
+  });
+}
