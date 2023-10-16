@@ -18,7 +18,10 @@
     <p class="lead">A simple calendar app for scheduling your work day</p>
   </header>
   <div class="container-lg px-5 main">
-    <p id="currentDay" class="lead"></p>
+    <div class="day-date-container">
+      <p id="currentDay" class="lead"></p>
+      <p id="currentDate" class="lead"></p>
+    </div>
     <!-- Use class for "past", "present", and "future" to apply styles to the
         time-block divs accordingly. The javascript will need to do this by
         adding/removing these classes on each div by comparing the hour in the

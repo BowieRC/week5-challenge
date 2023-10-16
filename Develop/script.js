@@ -29,8 +29,6 @@ for (i = 0; i < workingHours.length; i++) {
   saveBtn.attr("class", "btn saveBtn col-2 col-md-1");
   saveBtn.attr("aria-label", "save");
   saveBtn.attr("id", "sButton-" + i);
-  saveButtons.push(saveBtn);
-  saveBtn.number = i;
 
   var saveIcon = $("<i>");
   saveIcon.attr("class", "fas fa-save");
@@ -93,6 +91,5 @@ function checkClicks() {
 $("window").load(run());
 
 function run() {
-  console.log("Site Loaded");
   checkClicks();
 }
